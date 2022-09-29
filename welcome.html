@@ -19,7 +19,7 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
     ></script>
 </head>
-<body style="position: absolute; left: 50%; top: 50%;transform: translate(-50%, -50%);  background-image:var(--ambrosia)">
+<body style="display: flex;color: black; align-items: center; height: 1100px;  background-image:var(--ambrosia)">
 <!--     <center><div>
         <span id="user" class="message" style="font-size:larger;font-family: Ubuntu Mono,monospace;">Hello, < email-id ></Email-id></span>
         <div class="success"><span>Welcome to auth starter, You are successfully loged in!!!</span></div><br/>
@@ -27,30 +27,36 @@
     </div></center> -->
 
     <div class="container">
+
+        <span id="user" class="message" style="font-size:large;color: black; font-family: Ubuntu Mono,monospace;">Hello,<br> < email-id ></Email-id></span>
         <br>
-        <br>
-        <span id="user" class="message" style="font-size:large;font-family: Ubuntu Mono,monospace;">Hello,<br> < email-id ></Email-id></span>
-        <br>
-        <button class="btn btn-danger" onclick="logout()">Logout</button>
+        <button class="btn btn-black" onclick="logout()">Logout</button>
         <br />
         <br>
-        <h2>CRUD with Firebase</h2>
+        <h2 style="text-decoration:underline;">Student DataBase</h2>
+        <h2 style="font-weight: 900;">Asansol Engineering College</h2>
         <hr />
         <br />
+        <p>To search please go through <span style="color:crimson;">Roll No.</span></p>
+        <p>Roll no. & name will not be changed if the student has been registerd ! </p>
         <div class="form">
-          RollNo: <input type="text" name="RollNo" id="roll" /> <br /><br />
-          Name:&nbsp; <input type="text" name="name" id="name" /> <br /><br />
-          Gender: <input type="text" name="gender" id="gender" /> <br /><br />
-          Address: <input type="text" name="Address" id="address" /> <br /><br />
-        </div>
-  
+          Name:&nbsp; <input type="text" name="name" maxlength="50" size="50" id="name" required placeholder="Enter name :)"/> <br /><br />
+          Mobile Number:&nbsp; <input type="tel" maxlength="10" size="10" name="telephone" id="telephone" required placeholder="Enter mobile number."/> <br /><br />
+          Email Id:&nbsp; <input type="email" name="email" id="email" required placeholder="Enter email address."/> <br /><br />
+         University RollNo: <input maxlength="11" size="11" type="number" name="RollNo" id="roll" required placeholder="Enter full university roll no."/> <br /><br />
+            Department: <input type="text" name="gender" id="gender" required placeholder="Enter department. (i.e. Information Technology)"/> <br /><br />
+            Semester: <input type="text" maxlength="1" size="1" name="semester" id="semester" required placeholder="Enter your current semester. (i.e. 3rd , 4th)"/> <br /><br />
+            Address: <input type="text" name="Address" id="address" required placeholder="Enter current full address :)"/> <br /><br />
+        </div> 
         <div class="buttons">
         <!--   <button id="insert">Insert</button> -->
-          <button id="read">Read</button>
-          <button id="update">Update</button>
-          <button id="delete">Delete</button>
-          <button type="button" onClick="refreshPage()">Reset</button>
+          <button class="btn btn-black" id="read">Read</button>
+          <button class="btn btn-black" id="update">Update</button>
+          <button class="btn btn-black" id="delete">Delete</button>
+          <button class="btn btn-black" type="button" onClick="refreshPage()">Reset</button>
         </div>
+        <br>
+        <br>
       </div>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
