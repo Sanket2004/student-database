@@ -1,0 +1,163 @@
+:root {
+	--ambrosia:						#FCDBBA;
+	--apricot: 						#FF8652;
+	--aubergine: 					#6A2352;
+	--auburn: 						#A12F2F;
+	--asparagus: 					#A0C259;
+	--beetroot:						#7F0421;
+	--blue-tack: 					#82BFE0;
+	--bloom:							#363A57;
+	--blush: 							#D67B71;
+	--bronze:							#C27940;
+	--bud:								#94C15C;
+	--burnt-orange:				#FF5F00;
+	--butter:							#F2C94C;
+	--strawberry-yogurt:	#E4BCAD;
+	--carmine:						#9A133E;
+	--chocolate: 					#8F5D38;
+	--chestnut: 					#81291F;
+	--clay: 							#7D6050;
+	--conker: 						#6F3131;
+	--coral: 							#EB4444;
+	--dusty-purple: 			#7D6391;
+	--dusty-pink: 				#E4ADAD;
+	--emerald: 						#55B95F;
+	--fern:								#4F8D08;
+	--forest: 						#2E644A;
+	--fudge:							#C28742;
+	--grassy: 						#A8D363;
+	--green:							#62B90A;
+	--hazelnut: 					#D08E5A;
+	--ink:								#292C31;
+	--ivory:							#F2EFE3;
+	--lapis:							#2B4D8D;
+	--leafy:							#318553;
+	--lemon:							#EAFC7E;
+	--lime: 							#73D645;
+	--limestone:					#C9C5B5;
+	--magenta:						#BC2767;
+	--meadow:							#7A9A3E;
+	--melon:							#F2994A;
+	--midnight:						#1B3955;
+	--mink:								#E8C9A1;
+	--mint:								#C4EA70;
+	--moss:								#7DB21C;
+	--mushroom:						#EDE8D5;
+	--navy:								#363A57;
+	--orange:							#FD8A04;
+	--pale-lemon:					#F4FFDC;
+	--peach:							#FFB190;
+	--pond-bottom:				#264A46;
+	--powder-blue:				#B5D0E0;
+	--powder-pink:				#FBD1D1;
+	--primrose:						#E1F7B0;
+	--purple:							#A95AF3;
+	--purple-slate:				#545375;
+	--rainforest:					#25422E;
+	--raspberry-jam:			#3C0D2B;
+	--robins-egg:					#B8DEE0;
+	--rouge:							#CC3737;
+	--royal:							#4169E1;
+	--ruby:								#D1314B;
+	--sage:								#87A376;
+	--sakura:							#FFE4E4;
+	--sea-glass:					#7FD1AE;
+	--sea-foam:						#5D998B;
+	--sea-fog:						#758C92;
+	--slate:							#7184A5;
+	--spearmint:					#94E0CF;
+	--spring:							#5ACB65;
+	--succulent:					#83A944;
+	--twilight:						#203763;
+	--vavavoom:						#BF0D0D;
+	--white:							#FFFFFF;
+	--yellow:							#FFE03D;
+	
+	--trans: transparent;
+	--trans05: rgba(255,255,255,0.05);
+	--trans1: rgba(255,255,255,0.1);
+	--trans2: rgba(255,255,255,0.2);
+	--trans4: rgba(255,255,255,0.4);
+}
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap');
+* {
+    font-family: "Ubuntu Mono",monospace;
+    font-weight: 700;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:var(--ambrosia)
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+.card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.custom-field{
+    position: relative;
+    font-size: 14px;
+    padding-top: 20px;
+    margin-top: 5px;
+}
+
+.custom-field input{
+    padding: 12px;
+    width: 300px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1.5px solid gray;
+    outline-color: deepskyblue;
+}
+
+.custom-field .placeholder{
+    position: absolute;
+    left: 12px;
+    top: calc(50% + 10px);
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+
+.custom-field input:valid + .placeholder,
+.custom-field input:focus + .placeholder{
+    top: 21px;
+    font-size: 10px;
+    color: #222;
+    padding: 5px;
+    background: white;
+}
+
+.message{
+    font-size: 70px;
+    font-family: 'Ubuntu', sans-serif;
+    color: steelblue;
+}
+
+.success{
+    font-size: 18px;
+    margin-top: 15px;
+    color: seagreen;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a:hover {
+    text-decoration: underline;
+}
+h3 {
+    font-weight: 800;
+}
+.buttons {
+    display: flex;
+    gap: 1.4em;
+}
+input{
+    width: 100%;
+}
